@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1604656682 source:d:\it thing\code block\quanlythuvien(c++)\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<ctime>
+	<windows.h>
+	<conio.h>
+	<stdexcept>
+	<winuser.h>
+	<ctime>
+	<time.h>
+
+1603074139 source:d:\it thing\code block\quanlythuvien(c++)\icon.rc
+
