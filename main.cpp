@@ -379,7 +379,7 @@ bool kiemTraNamPhatHanh(string x){
         b = a[i] + b;
     }
     int z = stoi(b);
-    return (y<z);
+    return (y<=z);
 }
 bool KiemTraAdmin(string strTenDangNhap,string strMatKhau){
     Admin admin;
@@ -447,7 +447,11 @@ bool nhap_du_lieu(string& strUserName,string& strPassWord){
             }else if (e == '\r'){
                 break;
             }else if (e != '\b'){
-                cout << "*";
+                if(strPassWord.size()!=0){
+                    cout << "\b \b";
+                    cout << "*";
+                }
+                cout<<e;
                 strPassWord.push_back(e);
             }
         }
@@ -1057,8 +1061,10 @@ void formXoaSach(){
                 }
             }else if(Y.strMaSach==strMaSach&&Y.iTinhTrangSach!=0){
                 formThongTinSach(Y);
+                outPut(10,12,0,"\b                                 \b");
                 outPut(10,12,12,"Cuốn sách này không thể xóa");
             }else{
+                outPut(10,12,0,"\b                                 \b");
                 outPut(10,12,12,"Cuốn sách này không có trong kho ");
             }
 
@@ -1262,7 +1268,7 @@ void formThemPhieuMuon(){
             goTo(57, 6, 7);
             continue;
         }else if(key!='\b'){
-            goTo(57,6,7);cout<<key; cin>>strSoPhieuMuon;strSoPhieuMuon=key+strSoPhieuMuon;cin.ignore();
+            goTo(57,6,7);cout<<key; getline(cin,strSoPhieuMuon);strSoPhieuMuon=key+strSoPhieuMuon;
             goTo(54,8,7); getline(cin,strMaBanDoc);
             goTo(53,10,7); strNgayMuon=layNgay(0);cout<<strNgayMuon;
             goTo(52,12,7); strNgayTra=layNgay(7);cout<<strNgayTra;
@@ -1327,7 +1333,19 @@ void formThemPhieuMuon(){
             }
             bool check=true;
             for(int i=0;i<X.strMaSach.size();i++){
-                if(!KiemTraTinhTrangSach(X.strMaSach[i])){
+                if(!kiemTraMaSach(X.strMaSach[i])){
+                    outPut(34, 18, 9, "\b                                                                       \b");
+                    outPut(60, 17, 9, "\b                                                                           \b");
+                    outPut(48, 18, 9, "Mã sách không tồn tại");
+                    outPut(61, 14, 7, "\b                      \b");
+                    outPut(52, 12, 7, "\b                      \b");
+                    outPut(53, 10, 7, "\b                      \b");
+                    outPut(54, 8, 7, "\b                       \b");
+                    outPut(57, 6, 7, "\b                       \b");
+                    goTo(57, 6, 7);
+                    check=false;
+                    break;
+                }else if(!KiemTraTinhTrangSach(X.strMaSach[i])){
                     outPut(34, 18, 9, "\b                                                                       \b");
                     outPut(60,17,9,"\b                                                                           \b");
                     outPut(48,18,9,"Sách có mã "+X.strMaSach[i]+" đã được mượn trước");

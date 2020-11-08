@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1604656682 source:d:\it thing\code block\quanlythuvien(c++)\main.cpp
+1604803080 source:d:\it thing\code block\quanlythuvien(c++)\main.cpp
 	<iostream>
 	<bits/stdc++.h>
 	<ctime>
@@ -8,7 +8,6 @@
 	<stdexcept>
 	<winuser.h>
 	<ctime>
-	<time.h>
 
 1603074139 source:d:\it thing\code block\quanlythuvien(c++)\icon.rc
 

@@ -1,0 +1,60 @@
+Lưu ý:
+1.Khi nhập dữ liệu không đúng với yêu cầu sẽ được thông báo lỗi và nhập lại từ đầu
+2.Khi muốn quay về trước thì khu vực điền thông tin phải để hoàn toàn trống và ấn nút Backspace
+*********Đăng nhập*************
+Điền tên tài khoảng và mật khẩu
+Nếu không đúng sẽ thông báo và xóa đi và nhập lại cho tới khi nào vào thôi
+Có thể ấn nút Esc nếu muốn thoát
+*********Form Menu******************
+Chọn một trong hai là "Quản lý Sách" và "Quản Lý phiếu mượn"
+Ấn nút Backspace để đăng xuất
+*********Menu Sách******************
+Chọn 1 trong 3 mục sau:
+"Hiển thị thông tin sách" để xem danh sách Sách
+"Thêm sách" để thêm Sách
+"Xóa sách" để xóa Sách
+Ấn nút Backspace để về Menu
+*******Hiển thị thông tin Sách*******
+Xem danh sách Sách
+Ấn nút Backspace để về Menu Sách
+**************Thêm Sách**************
+Sẽ phải điền vào khu vực thông tin để thêm Sách:
+Mã sách:Mã sách phải không được trùng và điền theo mẫu "L.XXX"(X là một con số)
+Tên Sách:Chỉ được nhập sách tiếng anh nên tên phải tiếng anh
+Tác Giả:Tên tác giả phải là tiếng anh
+Nhà xuất bản:Phải là tên tiếng anh
+Số trang:Phải là số
+Ngày nhập:Sẽ được hệ thống điền vào là ngày hôm nay
+Tình trạng:Sẽ được hệ thống điền số 0 ý nghĩa là còn tồn tại trong thư viện
+Năm phát hành: Phải nhỏ hơn hoặc bằng năm hiện tại
+Giá:Phải là kiểu Số
+Ấn nút Backspace để về Menu Sách
+**************Xóa Sách***************
+Điền Mã Sách để xóa sách,
+Sẽ báo "Cuốn Sách này không tồn tại trong kho" nếu mã sách nhập vào không hợp lệ
+Sẽ báo "Cuốn sách này không thể xóa" nếu Sách đang tron tình trang đang được mượn (được biểu hiện là 1)
+Ấn nút Backspace để về Menu Sách
+**************Menu Phiếu mượn********
+Chọn 1 trong 3 mục sau:
+"Mượn Sách" để lập phiếu mượn Sách
+"Trả Sách" để trả những quyển sách đã mượn
+"Hiển thị thông tin phiếu mượn" để xem danh sách phiếu mượn
+Ấn nút Backspace để về Menu
+*************Mượn Sách***************
+Điền những thôn tin sau để lập phiếu mượn
+Mã phiếu mượn: Phải không được trùng với mã phiếu mượn khác và theo biểu mẫu "G.XXX"(X là một con số)
+Mã bạn đọc:Phải là thành viên trong thư viện vào đúng theo biểu mẩu "M.XXX"(X là một con số)
+Ngày mượn:Sẽ được hệ thống điền vào bằng ngày hôm nay
+Ngày trả :Sẽ được hệ thống điền vào bằng 7 ngày sau tính từ ngày mượn
+Danh sách mã sách:Những cuốn sách đó phải tồn tại trong thư viện và vẫn trong tình trạng chưa mượn ,theo ví dụ sau: L.001,L.020
+Thông báo "Mượn sách thành công" và sẽ báo ngày phải trả sách tính theo 7 ngày sau từ ngày được Mượn để thông báo hoàn tất việc mượn sách và lập phiếu mượn
+Ấn nút Backspace để về Menu Phiếu Mượn
+************Trả sách*****************
+Nhập mã phiếu mượn để trả những cuốn sách
+Sẽ báo "Sách trong phiếu này đã được trả và phiếu mượn này đã hết hiệu lực" nếu phiếu mượn đã được trả rồi và hết hiệu lực (được biểu hiện là 0 trong tình trạn phiếu mượn)
+Sẽ báo "Không tồn tại phiếu mượn"nếu mã phiếu mượn không hợp lệ
+Sẽ báo "Thành công" để thông báo hoàn tất việc trả Sách
+Ấn nút Backspace để về Menu Phiếu Mượn
+******Hiển thị thông tin phiếu mượn**
+Xem danh sách phiếu mượn
+Ấn nút Backspace để về Menu Phiếu mượn
