@@ -1402,12 +1402,14 @@ void formTraSach(){
         goTo(58,6,7);
         key=_getch();
         if(key!='\b'){
-            cout<<key;
-            cin>>strMaPhieuMuon;
+            if(key!='\r'){
+                cout<<key;
+            }
+            getline(cin,strMaPhieuMuon);
             strMaPhieuMuon=key+strMaPhieuMuon;
             PhieuMuonSach X=DS.SearchNode(strMaPhieuMuon);
-            if(X.strSoPhieuMuon=="G.000"){
-                outPut(42,11,9,"\b                                                                                 \b");
+            if(!(X.strSoPhieuMuon==strMaPhieuMuon)){
+                outPut(35,11,9,"\b                                                                                            \b");
                 outPut(42,11,9,"Không tồn tại mã phiếu mượn này");
                 outPut(58,6,7,"\b      \b");
                 goTo(58,6,7);
@@ -1423,7 +1425,7 @@ void formTraSach(){
                 ThayDoiTinhTrangPhieuMuon(X.strSoPhieuMuon);
                 outPut(53,8,9,"\b                                                                 \b");
                     outPut(53,8,9,"Thành Công");
-                    outPut(58,6,7,"\b      \b");
+                    outPut(58,6,7,"\b                                                             \b");
                     goTo(58,6,7);
             }
         }else if(key=='\b'){

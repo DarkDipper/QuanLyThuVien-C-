@@ -2,7 +2,7 @@ Lưu ý:
 1.Khi nhập dữ liệu không đúng với yêu cầu sẽ được thông báo lỗi và nhập lại từ đầu
 2.Khi muốn quay về trước thì khu vực điền thông tin phải để hoàn toàn trống và ấn nút Backspace
 *********Đăng nhập*************
-Điền tên tài khoảng và mật khẩu
+Điền tên tài khoản và mật khẩu
 Nếu không đúng sẽ thông báo và xóa đi và nhập lại cho tới khi nào vào thôi
 Có thể ấn nút Esc nếu muốn thoát
 *********Form Menu******************
@@ -32,7 +32,7 @@ Giá:Phải là kiểu Số
 **************Xóa Sách***************
 Điền Mã Sách để xóa sách,
 Sẽ báo "Cuốn Sách này không tồn tại trong kho" nếu mã sách nhập vào không hợp lệ
-Sẽ báo "Cuốn sách này không thể xóa" nếu Sách đang tron tình trang đang được mượn (được biểu hiện là 1)
+Sẽ báo "Cuốn sách này không thể xóa" nếu Sách đang trong tình trạng đang được mượn (được biểu hiện là 1)
 Ấn nút Backspace để về Menu Sách
 **************Menu Phiếu mượn********
 Chọn 1 trong 3 mục sau:
@@ -51,7 +51,7 @@ Thông báo "Mượn sách thành công" và sẽ báo ngày phải trả sách 
 Ấn nút Backspace để về Menu Phiếu Mượn
 ************Trả sách*****************
 Nhập mã phiếu mượn để trả những cuốn sách
-Sẽ báo "Sách trong phiếu này đã được trả và phiếu mượn này đã hết hiệu lực" nếu phiếu mượn đã được trả rồi và hết hiệu lực (được biểu hiện là 0 trong tình trạn phiếu mượn)
+Sẽ báo "Sách trong phiếu này đã được trả và phiếu mượn này đã hết hiệu lực" nếu phiếu mượn đã được trả rồi và hết hiệu lực (được biểu hiện là 0 trong tình trạng phiếu mượn)
 Sẽ báo "Không tồn tại phiếu mượn"nếu mã phiếu mượn không hợp lệ
 Sẽ báo "Thành công" để thông báo hoàn tất việc trả Sách
 Ấn nút Backspace để về Menu Phiếu Mượn
