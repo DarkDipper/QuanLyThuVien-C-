@@ -366,7 +366,7 @@ bool is_number(const std::string &s){
 }
 bool kiemTraTiengViet(string x){
     for(int i=0;i<x.size();i++){
-        if(!(97<=(int)x[i]&&(int)x[i]<=122)){
+        if(!(97<=(int)x[i]&&(int)x[i]<=122||65<=(int)x[i]&&(int)x[i]<=90)){
             return true;
         }
     }
@@ -1172,6 +1172,7 @@ void formThemSach(){
             }else if(kiemTraTiengViet(strTenSach)||kiemTraTiengViet(strTacGia)||kiemTraTiengViet(strNhaXuatBan)){
                 outPut(50, 27, 14, "\b                               \b");
                 outPut(50, 27, 14, "Chỉ nhận sách tiếng anh nhập khẩu");
+
             }else if(!is_number(strGiaBan)){
                 outPut(50, 27, 14, "\b                               \b");
                 outPut(50, 27, 14, "Giá sách không hợp lệ");
@@ -1411,12 +1412,12 @@ void formTraSach(){
             if(!(X.strSoPhieuMuon==strMaPhieuMuon)){
                 outPut(35,11,9,"\b                                                                                            \b");
                 outPut(42,11,9,"Không tồn tại mã phiếu mượn này");
-                outPut(58,6,7,"\b      \b");
+                outPut(58,6,7,"\b                                                                                              \b");
                 goTo(58,6,7);
             }else if(X.iTinhTrangPhieuMuon==0){
                 outPut(45,8,9,"\b                                                                 \b");
                 outPut(35,11,9,"Sách trong phiếu này đã được trả và phiếu mượn này đã hết hiệu lực");
-                outPut(58,6,7,"\b      \b");
+                outPut(58,6,7,"\b                                                                    \b");
                 goTo(58,6,7);
             }else{
                 for(int i=0;i<X.strMaSach.size();i++){
